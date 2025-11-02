@@ -1,7 +1,8 @@
 import { useStore } from '../../store/useStore';
 import { taskService } from '../../services/taskService';
 import { format } from 'date-fns';
-import { Task } from '../../types';
+import type { Task } from '../../types';
+import { supabase } from '../../lib/supabase';
 
 export function DeletedTasksView() {
   const { user, tasks, loadTasks } = useStore();
@@ -18,8 +19,8 @@ export function DeletedTasksView() {
   const handlePermanentDelete = async (task: Task) => {
     if (confirm('Permanently delete this task? This cannot be undone.')) {
       // Actually delete from database
-      const { error } = await taskService['supabase']
-        .from('tasks')
+      const { error } = await supabase
+        .from('tm_tasks')
         .delete()
         .eq('id', task.id);
       

@@ -7,7 +7,7 @@ import { OCRUpload } from '../Tasks/OCRUpload';
 import { SearchBar } from '../UI/SearchBar';
 import { TaskDetailPopup } from '../Tasks/TaskDetailPopup';
 import { AttributeEditor } from '../Tasks/AttributeEditor';
-import { Task } from '../../types';
+import type { Task } from '../../types';
 import { taskService } from '../../services/taskService';
 import { authService } from '../../services/authService';
 import { CalendarSidebar } from '../Calendar/CalendarSidebar';

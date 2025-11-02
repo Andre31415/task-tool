@@ -12,7 +12,7 @@ import {
 } from 'date-fns';
 import { useState } from 'react';
 import { useStore } from '../../store/useStore';
-import { Task } from '../../types';
+import type { Task } from '../../types';
 import { taskService } from '../../services/taskService';
 
 export function MonthView() {

@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { format, startOfMonth, endOfMonth, eachDayOfInterval, isSameDay, addMonths, subMonths } from 'date-fns';
 import { useStore } from '../../store/useStore';
-import { Task } from '../../types';
+import type { Task } from '../../types';
 import { taskService } from '../../services/taskService';
 import { googleCalendarService } from '../../services/googleCalendarService';
 
@@ -9,7 +9,7 @@ export function CalendarSidebar() {
   const [currentDate, setCurrentDate] = useState(new Date());
   const [selectedDate, setSelectedDate] = useState<Date | null>(null);
   const [isConnectingGoogle, setIsConnectingGoogle] = useState(false);
-  const { user, tasks, loadTasks, googleCalendars, googleEvents, setGoogleCalendars, setGoogleEvents } = useStore();
+  const { user, tasks, loadTasks, googleCalendars, setGoogleCalendars, setGoogleEvents } = useStore();
 
   useEffect(() => {
     // Initialize Google Calendar if needed

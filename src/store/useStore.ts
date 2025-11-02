@@ -1,5 +1,5 @@
 import { create } from 'zustand';
-import { Task, User, ViewMode, GoogleCalendar, GoogleCalendarEvent } from '../types';
+import type { Task, User, ViewMode, GoogleCalendar, GoogleCalendarEvent } from '../types';
 import { taskService } from '../services/taskService';
 import { authService } from '../services/authService';
 

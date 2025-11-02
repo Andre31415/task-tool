@@ -1,7 +1,7 @@
 import { useStore } from '../../store/useStore';
 import { taskService } from '../../services/taskService';
 import { format } from 'date-fns';
-import { Task } from '../../types';
+import type { Task } from '../../types';
 
 export function CompletedTasksView() {
   const { user, tasks, loadTasks } = useStore();
