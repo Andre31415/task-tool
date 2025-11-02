@@ -1,0 +1,57 @@
+================================================================================
+PUSH TO GITHUB - SIMPLE INSTRUCTIONS
+================================================================================
+
+COMMAND TO RUN:
+---------------
+cd "/Users/andrefarinazojr/Task Tool"
+git push -u origin main
+
+
+WHEN PROMPTED:
+--------------
+Username: Andre31415
+Password: [Use Personal Access Token - NOT your GitHub password]
+
+
+GET PERSONAL ACCESS TOKEN:
+--------------------------
+1. Visit: https://github.com/settings/tokens/new
+2. Name: Task Tool Deploy
+3. Expiration: 90 days
+4. Scopes: Check the "repo" box
+5. Click "Generate token"
+6. COPY THE TOKEN (you won't see it again!)
+7. Use it as the password when git asks
+
+
+AFTER PUSH SUCCESS:
+-------------------
+Your code will be at: https://github.com/Andre31415/task-tool
+
+Then Vercel will automatically redeploy!
+
+
+TROUBLESHOOTING:
+----------------
+If push fails:
+1. Make sure you have a Personal Access Token (not password)
+2. Copy the token carefully (no extra spaces)
+3. Try again
+
+Alternative: Use SSH
+git remote set-url origin git@github.com:Andre31415/task-tool.git
+git push -u origin main
+
+
+================================================================================
+YOUR NEXT STEPS AFTER PUSH:
+================================================================================
+
+1. Add environment variables in Vercel (see ENV_VARIABLES_FOR_VERCEL.md)
+2. Redeploy on Vercel
+3. Update Google OAuth with Vercel URL (see UPDATE_GOOGLE_OAUTH.md)
+4. Test at: https://task-tool-p0nyr9iwn-andre-8bdfa351.vercel.app
+
+================================================================================
+
