@@ -14,6 +14,12 @@ export class GoogleCalendarService {
   async initialize(): Promise<void> {
     if (this.isInitialized) return;
 
+    // Check if credentials are configured
+    if (!this.clientId || !this.apiKey) {
+      console.log('Google Calendar not configured - skipping initialization');
+      return;
+    }
+
     return new Promise((resolve, reject) => {
       // Load Google API
       const script = document.createElement('script');

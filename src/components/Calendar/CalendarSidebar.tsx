@@ -86,7 +86,7 @@ export function CalendarSidebar() {
       </div>
 
       {/* Google Calendar Connection */}
-      {!googleCalendarService.getIsSignedIn() ? (
+      {import.meta.env.VITE_GOOGLE_CLIENT_ID && !googleCalendarService.getIsSignedIn() ? (
         <button
           onClick={handleGoogleConnect}
           disabled={isConnectingGoogle}
